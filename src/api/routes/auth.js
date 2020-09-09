@@ -17,7 +17,7 @@ module.exports = (app) => {
 
             res.status(200).send({ auth: true, token: token });
         } else
-            res.status(500).send('Login inválido!');
+            res.status(400).send('Login inválido!');
     });
     
     app.get('/logout', function(req, res) {

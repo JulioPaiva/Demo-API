@@ -9,9 +9,8 @@ const express = require('express'),
         app.use(express.urlencoded({ extended: false }));
 
         require('./src/api/routes/ping')(app);
-        require('./src/api/routes/filial')(app);
         require('./src/api/routes/auth')(app);
-
+        
         app.listen(process.env.PORT, () => 
                 console.log(`Listening on port ${process.env.PORT}!`));
 
